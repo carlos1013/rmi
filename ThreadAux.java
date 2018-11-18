@@ -25,7 +25,7 @@ public class ThreadAux implements Runnable {
             int n,line;
             Random r = new Random();
             // Registry registry = LocateRegistry.getRegistry(null);
-            Registry registry = LocateRegistry.getRegistry("54.184.234.170", 1099);
+            Registry registry = LocateRegistry.getRegistry("54.184.234.170", 5035);
             FileManager stub = (FileManager) registry.lookup("FileManager");
             if (mode==1){
                 n = r.nextInt(3);
@@ -40,7 +40,7 @@ public class ThreadAux implements Runnable {
             Thread.sleep(2000);
         }
         catch(Exception err){
-
+            System.err.println("Capturando a exceção no Cliente: " + err.toString());
         }
     }
     
