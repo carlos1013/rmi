@@ -55,9 +55,10 @@ public class FileManagerServer implements FileManager {
 	public static void main(String args[]) {
 		try {
 			//inicializando
+			System.setSecurityManager(new RMISecurityManager());
 			FileManagerServer obj = new FileManagerServer(Integer.parseInt(args[0]));
 			Registry registry = LocateRegistry.createRegistry(5035);
-			FileManager stub = (FileManager) UnicastRemoteObject.exportObject(obj,5035);
+			FileManager stub = (FileManager) UnicastRemoteObject.exportObject(obj,0);
 			//Registry registry = LocateRegistry.getRegistry(1099);
 			registry.bind("FileManager", stub);
 			System.out.println("Servidor pronto!");
