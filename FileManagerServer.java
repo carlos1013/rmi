@@ -56,9 +56,9 @@ public class FileManagerServer implements FileManager {
 		try {
 			//inicializando
 			FileManagerServer obj = new FileManagerServer(Integer.parseInt(args[0]));
-			//Registry registry = LocateRegistry.createRegistry(5035);
+			Registry registry = LocateRegistry.createRegistry(1099);
 			FileManager stub = (FileManager) UnicastRemoteObject.exportObject(obj,0);
-			Registry registry = LocateRegistry.getRegistry();
+			//Registry registry = LocateRegistry.getRegistry();
 			registry.bind("FileManager", stub);
 			System.out.println("Servidor pronto!");
 		} catch (Exception e) {
