@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.rmi.RemoteException;
+import java.rmi.*;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.*;
@@ -26,9 +27,9 @@ public class ThreadAux implements Runnable {
             Random r = new Random();
             // Registry registry = LocateRegistry.getRegistry(null);
             System.out.println("Thread OK");
-            Registry registry = LocateRegistry.getRegistry("34.220.145.239");
-            System.out.println("get Registry");
-            FileManager stub = (FileManager) registry.lookup("FileManager");
+            // Registry registry = LocateRegistry.getRegistry("52.26.6.52",1099);
+            // System.out.println("get Registry");
+            FileManager stub = (FileManager) Naming.lookup("rmi://52.26.6.52/"+FileManager.NAME);
             System.out.println("Passei pelo lookup");
             if (mode==1){
                 n = r.nextInt(3);
