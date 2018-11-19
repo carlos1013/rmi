@@ -25,7 +25,7 @@ public class ThreadAux implements Runnable {
             int n,line;
             Random r = new Random();
             // Registry registry = LocateRegistry.getRegistry(null);
-            Registry registry = LocateRegistry.getRegistry("54.184.234.170", 5035);
+            Registry registry = LocateRegistry.getRegistry("34.220.145.239");
             System.out.println("Passei pelo registry");
             FileManager stub = (FileManager) registry.lookup("FileManager");
             //System.out.println("Passei pelo Stub");
