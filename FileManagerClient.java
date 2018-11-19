@@ -14,15 +14,15 @@ public class FileManagerClient {
 			/*Registry registry = LocateRegistry.getRegistry(null);
 			FileManager stub = (FileManager) registry.lookup("FileManager");*/
 			ThreadAux c1 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c2 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c3 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c4 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c5 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c6 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c7 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c8 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c9 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
-			ThreadAux c10 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			//ThreadAux c2 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			//ThreadAux c3 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			// ThreadAux c4 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			// ThreadAux c5 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			// ThreadAux c6 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			// ThreadAux c7 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			// ThreadAux c8 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			// ThreadAux c9 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
+			// ThreadAux c10 = new ThreadAux(Integer.parseInt(args[0]),r.nextInt(2));
 
 			/*
 			n = r.nextInt(3);
