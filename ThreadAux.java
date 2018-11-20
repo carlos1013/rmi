@@ -25,23 +25,23 @@ public class ThreadAux implements Runnable {
         try{
             int n,line;
             Random r = new Random();
-            System.out.println("Thread OK");
-            Registry registry = LocateRegistry.getRegistry("52.26.6.52");
-            System.out.println("get Registry");
+            //System.out.println("Thread OK");
+            Registry registry = LocateRegistry.getRegistry("54.202.30.211");
+            //System.out.println("get Registry");
             FileManager stub = (FileManager) registry.lookup(FileManager.NAME);
-            System.out.println("Passei pelo lookup");
+            //System.out.println("Passei pelo lookup");
             if (mode==1){
                 n = r.nextInt(3);
-                System.out.println("Antes do Write");
+                //System.out.println("Antes do Write");
                 stub.write(n, Integer.toString(id));
-                System.out.println("Depois do Write");
+                //System.out.println("Depois do Write");
             }
             else{
                 n = r.nextInt(3);
                 line = r.nextInt(10);
-                System.out.println("Antes do Read");
+                //System.out.println("Antes do Read");
                 stub.read(n, line);
-                System.out.println("Depois do Write");
+                //System.out.println("Depois do Write");
             }
             System.out.println(Thread.currentThread().getId() + " executei");
             Thread.sleep(2000);
