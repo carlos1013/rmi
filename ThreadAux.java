@@ -25,11 +25,10 @@ public class ThreadAux implements Runnable {
         try{
             int n,line;
             Random r = new Random();
-            // Registry registry = LocateRegistry.getRegistry(null);
             System.out.println("Thread OK");
-            // Registry registry = LocateRegistry.getRegistry("52.26.6.52",1099);
-            // System.out.println("get Registry");
-            FileManager stub = (FileManager) Naming.lookup("rmi://52.26.6.52/"+FileManager.NAME);
+            Registry registry = LocateRegistry.getRegistry("52.26.6.52");
+            System.out.println("get Registry");
+            FileManager stub = (FileManager) registry.lookup(FileManager.NAME);
             System.out.println("Passei pelo lookup");
             if (mode==1){
                 n = r.nextInt(3);
